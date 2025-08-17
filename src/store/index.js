@@ -13,7 +13,8 @@ const initialState = {
 };
 
 // Reducer -> Wt to do when an action is dispatched
-const counterReducer = (state = { initialState }, action) => {
+const counterReducer = (state = initialState, action) => {
+  console.log("state.counter", state.counter);
   if (action.type === "increment") {
     return { counter: (state.counter || 0) + 1 };
   }
