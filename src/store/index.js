@@ -1,5 +1,5 @@
 /*
- *  4 Steps to  Redux
+ *  Redux
  *  1. Create a store [ by using createStore from redux ]
  *  2. Create a reducer [ with 2 arguments: state and action, based on the action type, it will return a new state ]
  *  3. Create an initial state and pass it to the reducer
@@ -12,7 +12,7 @@ const initialState = {
   counter: 0,
 };
 
-// Reducer
+// Reducer -> Wt to do when an action is dispatched
 const counterReducer = (state = { initialState }, action) => {
   if (action.type === "increment") {
     return { counter: (state.counter || 0) + 1 };
@@ -25,5 +25,8 @@ const counterReducer = (state = { initialState }, action) => {
   return state; // Return the current state if no action matches
 };
 
-// Store
-const store = createStore(counterReducer);
+// Store -> Create a store with the reducer
+const store = createStore(counterReducer); // Pointing counterReducer function when we create the store
+// This reducer fn will gv the instructions to store 'What to do when an action is dispatched'
+
+export default store;
