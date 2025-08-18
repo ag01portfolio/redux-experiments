@@ -20,7 +20,7 @@ const counterReducer = (state = initialState, action) => {
   }
 
   if (action.type === "decrement") {
-    return { counter: (state.counter || 0) + 1 };
+    return { counter: (state.counter || 0) - 1 };
   }
 
   return state; // Return the current state if no action matches
