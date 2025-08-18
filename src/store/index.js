@@ -12,14 +12,17 @@ const initialState = {
   counter: 0,
 };
 
+const Increment = "increment";
+const Decrement = "decrement";
+
 // Reducer -> Wt to do when an action is dispatched
 const counterReducer = (state = initialState, action) => {
   console.log("state.counter", state.counter);
-  if (action.type === "increment") {
+  if (action.type === Increment) {
     return { counter: (state.counter || 0) + 1 };
   }
 
-  if (action.type === "decrement") {
+  if (action.type === Decrement) {
     return { counter: (state.counter || 0) - 1 };
   }
 
