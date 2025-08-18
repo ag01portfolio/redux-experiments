@@ -12,8 +12,8 @@ const initialState = {
   counter: 0,
 };
 
-const Increment = "increment";
-const Decrement = "decrement";
+export const Increment = "increment";
+export const Decrement = "decrement";
 
 // Reducer -> Wt to do when an action is dispatched
 const counterReducer = (state = initialState, action) => {
